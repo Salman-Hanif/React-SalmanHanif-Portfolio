@@ -1,9 +1,8 @@
 import Services from './components/Services';
-import Preloader from './Components/Preloader';
-import Hero from './Components/Hero';
+import Preloader from './components/Preloader';
 import './App.css';
 import Footer from './components/Footer';
-import Container from './Components/Container';
+import Container from './components/Container';
 import OpenWork from './Router/OpenWork';
 import { OpenWorkStore } from './ContextStore/OpenWorkStore';
 import Work from './components/Work';
@@ -11,6 +10,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useState } from 'react';
 import Header from './components/Header';
 import SubmitForm from './components/SubmitForm';
+import Hero from './components/Hero';
 
 function App() {
   const [webName, setWebName] = useState('');
