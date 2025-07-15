@@ -89,13 +89,13 @@ const Hero = () => {
         </div>
 
         <div className="flex gap-4 justify-center">
-          <a href="#form">
-            <button className="px-6 py-2 bg-[#10be27] text-white font-bold rounded hover:-translate-y-1 hover:shadow-[0_0_25px_#04b30f] transition">
+          <a href="#submitform">
+            <button className="px-6 cursor-pointer py-2 bg-[#10be27] text-white font-bold rounded hover:-translate-y-1 hover:shadow-[0_0_25px_#04b30f] transition">
               Let's Talk
             </button>
           </a>
-          <a href="/home-section/salman web designer.pdf" download="Salman-Hanif-CV">
-            <button className="px-6 py-2 bg-[#10be27] text-white font-bold rounded hover:-translate-y-1 hover:shadow-[0_0_25px_#04b30f] transition">
+          <a href="\public\Salman Hanif Frontend Resume .pdf" download="Salman-Hanif-CV">
+            <button className="px-6 cursor-pointer py-2 bg-[#10be27] text-white font-bold rounded hover:-translate-y-1 hover:shadow-[0_0_25px_#04b30f] transition">
               Download CV
             </button>
           </a>

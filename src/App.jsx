@@ -1,7 +1,5 @@
 import Services from './components/Services';
-import Form from './Components/Form';
 import Preloader from './Components/Preloader';
-// import Header from './Components/Header';
 import Hero from './Components/Hero';
 import './App.css';
 import Footer from './components/Footer';
@@ -12,6 +10,7 @@ import Work from './components/Work';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useState } from 'react';
 import Header from './components/Header';
+import SubmitForm from './components/SubmitForm';
 
 function App() {
   const [webName, setWebName] = useState('');
@@ -30,7 +29,7 @@ function App() {
           <Hero />
           <Work />
           <Services />
-          <Form />
+          <SubmitForm/>
           <Footer />
         </Container>
       )

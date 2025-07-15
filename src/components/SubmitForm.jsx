@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-function Form() {
-  function handleSubmit(e) {
+const SubmitForm = () => {
+    function handleSubmit(e) {
     e.preventDefault()
     e.target.submit()
   }
   return (
     <section
-      id="form"
+      id="submitform"
       className="flex flex-col justify-center items-center w-full px-4 gap-11 py-10"
     >
       <h2 className="text-white text-3xl md:text-4xl mb-8 underline decoration-green-700">
@@ -110,7 +110,7 @@ function Form() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Form;
+export default SubmitForm

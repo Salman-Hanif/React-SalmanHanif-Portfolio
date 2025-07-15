@@ -46,7 +46,7 @@ const Header = () => {
           Services
         </Link>
         <Link
-          to="form"
+          to="submitform"
           onClick={() => setIsOpen(false)}
           className="text-[15px] md:text-[20px] font-medium hover:text-green-500 cursor-pointer"
         >
