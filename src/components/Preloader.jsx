@@ -6,7 +6,7 @@ const Preloader = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsVisible(false);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -23,7 +23,6 @@ const Preloader = () => {
           <div className="w-16 h-16 border-4 border-transparent text-white text-2xl animate-spin flex items-center justify-center border-t-white rounded-full">
           </div>
         </div>
-        <img className='w-[70px] absolute' src="/src/assets/SalmanLogoGreen.webp" alt="" srcset="" />
       </div>
       <div>
         <h3 className="text-white text-4xl font-sacramento font-bold">Salman Hanif</h3>
