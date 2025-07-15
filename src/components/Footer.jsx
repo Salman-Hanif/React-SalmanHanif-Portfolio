@@ -6,7 +6,6 @@ function Footer() {
     <footer id="footer" className="text-white pt-12 pb-6 bg-[#1E1E1E]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {/* About Me */}
           <div className="mb-8">
             <h3 className="text-[#04b30f] text-xl font-semibold mb-4 pb-2 border-b border-[#04b30f] inline-block">
               About Me
@@ -137,7 +136,7 @@ function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>+92 312 2711464</span>
+                <span>+92 312 2711434</span>
               </li>
               <li className="flex items-center">
                 <svg

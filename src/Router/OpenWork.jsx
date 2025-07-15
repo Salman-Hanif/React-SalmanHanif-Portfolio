@@ -9,19 +9,19 @@ function OpenWork() {
 
   const projects = {
     ecommerce: {
-      image: '/src/assets/ecommerce.webp',
+      image: '/images/ecommerce.webp',
       url: 'https://ecommerce-website-developershub.vercel.app/'
     },
     smashers: {
-      image: '/src/assets/smashers.webp',
+      image: '/images/smashers.webp',
       url: 'https://example.com/smashers'
     },
     newshub: {
-      image: '/src/assets/news.webp',
+      image: '/images/news.webp',
       url: 'https://example.com/newshub'
     },
     ahsan: {
-      image: '/src/assets/ahsan.webp',
+      image: '/images/ahsan.webp',
       url: 'https://example.com/ahsan'
     }
   };
@@ -43,7 +43,7 @@ function OpenWork() {
             <img
               src={project.image}
               alt={projectKey}
-              className="rounded-2xl max-h-[80vh] object-contain shadow-[0px_0px_25px_green] transition-transform duration-300 hover:scale-[1.02]"
+              className="rounded-2xl text-white max-h-[80vh] object-contain shadow-[0px_0px_25px_green] transition-transform duration-300 hover:scale-[1.02]"
             />
           {/* </a> */}
         </div>
