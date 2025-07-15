@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="w-full flex justify-center items-center h-full">
         <div className="w-[300px] md:w-[400px] h-[300px] md:h-[400px] border-[5px] border-[#10be27] rounded-full overflow-hidden transition duration-500 hover:border-white hover:shadow-[0_0_25px_#04b30f] hover:-translate-y-1">
           <img
-            src="\src\assets\salman pic.webp"
+            src="\images\salmanprofile.webp"
             alt="Salman"
             className="w-full h-full object-cover"
           />
@@ -94,7 +94,7 @@ const Hero = () => {
               Let's Talk
             </button>
           </a>
-          <a href="\public\Salman Hanif Frontend Resume .pdf" download="Salman-Hanif-CV">
+          <a href="\CV\Salman Hanif Frontend Resume .pdf" download="Salman-Hanif-CV">
             <button className="px-6 cursor-pointer py-2 bg-[#10be27] text-white font-bold rounded hover:-translate-y-1 hover:shadow-[0_0_25px_#04b30f] transition">
               Download CV
             </button>

@@ -28,11 +28,11 @@ const SubmitForm = () => {
         <div className="w-full flex justify-center items-center gap-7">
           <div
             id="drawer-contact"
-            className="flex flex-col gap-6 border-[#04b30f] hover:scale-[1.02] duration-200 shadow-[0_0px_60px_#0e52189f] border-2 w-full max-w-[600px] h-[550px] rounded-3xl p-6"
+            className="flex flex-col py-3.5 gap-6 border-[#04b30f] hover:scale-[1.02] duration-200 shadow-[0_0px_60px_#0e52189f] border-2 w-full max-w-[600px] h-[550px] rounded-3xl p-6"
           >
             <h5
               id="drawer-label"
-              className="flex gap-3 items-center text-white text-4xl uppercase"
+              className="flex gap-3 items-center text-white text-3xl md:text-4xl uppercase"
             >
               <svg
                 className="w-10"
@@ -93,7 +93,7 @@ const SubmitForm = () => {
                   id="message"
                   name="message"
                   rows="4"
-                  className="w-full h-[180px] border-green-700 border-2 rounded-3xl pl-4 text-white bg-transparent placeholder:pl-2 placeholder:pt-2"
+                  className="w-full h-[180px] border-green-700 pt-4 placeholder:pl-0 border-2 rounded-3xl pl-4 text-white bg-transparent  placeholder:pt-1"
                   placeholder="Your message..."
                   required
                 ></textarea>

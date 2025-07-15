@@ -10,7 +10,7 @@ const Header = () => {
      <p
   className="hover:scale-110 transition-transform duration-300 cursor-pointer"
 >
-  <img className="w-[70px] text-red-700" src="/src/assets/SalmanLogoGreen.webp" alt="" srcset="" />
+  <img className="w-[70px] " src="/images/SalmanLogoGreen.webp" alt="LOGO" srcset="" />
 </p>
 
 
