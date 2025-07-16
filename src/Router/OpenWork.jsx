@@ -8,6 +8,10 @@ function OpenWork() {
   const navigate = useNavigate();
 
   const projects = {
+    ahsan: {
+      image: '/images/ahsan.webp',
+      url: 'https://react-ahsan-medical-complex.vercel.app/'
+    },
     ecommerce: {
       image: '/images/ecommerce.webp',
       url: 'https://ecommerce-website-developershub.vercel.app/'
@@ -19,10 +23,6 @@ function OpenWork() {
     newshub: {
       image: '/images/news.webp',
       url: 'https://example.com/newshub'
-    },
-    ahsan: {
-      image: '/images/ahsan.webp',
-      url: 'https://example.com/ahsan'
     }
   };
 
@@ -39,13 +39,13 @@ function OpenWork() {
           <IoMdClose />
         </button>
         <div className="flex justify-center">
-          {/* <a href={project.url} target="_blank" rel="noopener noreferrer"> */}
+          <a href={project.url} target="_blank" rel="noopener noreferrer">
             <img
               src={project.image}
               alt={projectKey}
               className="rounded-2xl text-white max-h-[80vh] object-contain shadow-[0px_0px_25px_green] transition-transform duration-300 hover:scale-[1.02]"
             />
-          {/* </a> */}
+          </a>
         </div>
       </div>
     </div>

@@ -17,17 +17,18 @@ function Work() {
           <div className="w-4 h-4 rounded-full border-[3px] border-[#ffffff] absolute left-1/2 -translate-x-1/2 bg-[#111] z-1 hover:scale-110 ease-in-out duration-100 hidden sm:block" />
 
           <Link to="/work" className="flex w-full relative justify-center sm:justify-start">
-            <div onClick={() => getwebname('ecommerce')} className="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200">
-              <img src="/images/ecommerce.webp" alt="Ecommerce" className="max-w-[400px] rounded-2xl w-full mr-auto relative z-1 drop-shadow-[0_0px_60px_#0e52189f]" />
+            <div onClick={() => getwebname('ahsan')} className="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200">
+              <img src="/images/ahsan.webp" alt="Ahsan Medical Complex" className="max-w-[400px] w-full rounded-2xl relative z-1 drop-shadow-[0_0px_60px_#0e52189f]" />
             </div>
           </Link>
 
           <div className="w-full">
-            <h3 className="text-[#04b30f] font-bold text-2xl md:text-4xl">Ecommerce Website</h3>
+           <h3 className="text-[#04b30f] font-bold text-2xl md:text-4xl">Ahsan Medical Complex</h3>
+        
             <p className="text-justify text-sm md:text-base mt-2">
-              A visually appealing and user-centric frontend design for an e-commerce website,
-              developed during my internship at Developers Hub. The design focuses on product
-              showcasing, smooth navigation, and a modern shopping experience.
+              A modern and responsive frontend design created for Ahsan Medical Complex, focusing on
+              seamless user experience and clean medical aesthetics. The layout ensures easy
+              navigation for patients and visitors, while maintaining a professional and trustworthy look.
             </p>
           </div>
         </div>
@@ -74,11 +75,11 @@ function Work() {
 
         <div className="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[80px] items-center sm:mt-20 relative">
           <div className="order-2 sm:order-1 w-full">
-            <h3 className="text-[#04b30f] font-bold text-2xl md:text-4xl">Ahsan Medical Complex</h3>
-            <p className="text-justify text-sm md:text-base mt-2">
-              A modern and responsive frontend design created for Ahsan Medical Complex, focusing on
-              seamless user experience and clean medical aesthetics. The layout ensures easy
-              navigation for patients and visitors, while maintaining a professional and trustworthy look.
+            
+           <p className="text-justify text-sm md:text-base mt-2">
+              A visually appealing and user-centric frontend design for an e-commerce website,
+              developed during my internship at Developers Hub. The design focuses on product
+              showcasing, smooth navigation, and a modern shopping experience.
             </p>
           </div>
 
@@ -86,8 +87,8 @@ function Work() {
           <div className="w-4 h-4 rounded-full border-[3px] border-[#ffffff] absolute left-1/2 -translate-x-1/2 bg-[#111] z-1 hover:scale-110 ease-in-out duration-100 hidden sm:block" />
 
           <Link to="/work" className="order-1 sm:order-2 flex w-full relative justify-center sm:justify-start">
-            <div onClick={() => getwebname('ahsan')} className="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto">
-              <img src="/images/ahsan.webp" alt="Ahsan Medical Complex" className="max-w-[400px] w-full rounded-2xl relative z-1 drop-shadow-[0_0px_60px_#0e52189f]" />
+            <div onClick={() => getwebname('ecommerce')} className="flex flex-col items-center relative group sm:hover:scale-105 ease-in-out duration-200 sm:ml-auto">
+              <img src="/images/ecommerce.webp" alt="Ecommerce" className="max-w-[400px] rounded-2xl w-full mr-auto relative z-1 drop-shadow-[0_0px_60px_#0e52189f]" />
             </div>
           </Link>
         </div>
