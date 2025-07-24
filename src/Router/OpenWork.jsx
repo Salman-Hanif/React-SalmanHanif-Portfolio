@@ -30,12 +30,12 @@ function OpenWork() {
     },
     newshub: {
       image: '/images/news.webp',
-      url: 'https://example.com/newshub'
+      url: 'https://news-application-two-virid.vercel.app/'
     }
   };
 
   const projectKey = webName?.toLowerCase?.();
-  const project = projects[projectKey] || projects['ecommerce'];
+  const project = projects[projectKey] || projects['portfolio'];
 
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-[#0c0c0c] z-50 flex items-center justify-center px-4 py-6">
