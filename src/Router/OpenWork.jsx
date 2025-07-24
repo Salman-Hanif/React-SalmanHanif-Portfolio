@@ -8,6 +8,14 @@ function OpenWork() {
   const navigate = useNavigate();
 
   const projects = {
+    portfolio : {
+      image : '/images/portfolio.webp',
+      url: 'https://salmanhanif-portfolio.vercel.app/'
+    },
+    todoapp : {
+      image : '/images/TodoApp.webp',
+      url: 'https://todo-application-mr4y.vercel.app/'
+    },
     ahsan: {
       image: '/images/ahsan.webp',
       url: 'https://react-ahsan-medical-complex.vercel.app/'
