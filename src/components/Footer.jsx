@@ -1,7 +1,31 @@
-import React from 'react';
-import { FaInstagram, FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa';
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import React from "react";
+import { FaInstagram, FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa";
 
 function Footer() {
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    const footerTL = gsap.timeline({
+      scrollTrigger: {
+        // markers:true,
+        trigger: "#footer",
+        scrub: true,
+        start: "10% bottom",
+        end: "50% 70%",
+      },
+    });
+    footerTL.from("#footer", {
+      opacity: 0,
+      duration: 0.3,
+    });
+    footerTL.from("#footer div", {
+      y: 70,
+      duration: 0.3,
+    });
+  });
+
   return (
     <footer id="footer" className="text-white pt-12 pb-6 bg-[#1E1E1E]">
       <div className="container mx-auto px-4">
@@ -57,22 +81,34 @@ function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="#main" className="hover:text-[#04b30f] transition-colors duration-300">
+                <a
+                  href="#main"
+                  className="hover:text-[#04b30f] transition-colors duration-300"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#websites" className="hover:text-[#04b30f] transition-colors duration-300">
+                <a
+                  href="#websites"
+                  className="hover:text-[#04b30f] transition-colors duration-300"
+                >
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#04b30f] transition-colors duration-300">
+                <a
+                  href="#services"
+                  className="hover:text-[#04b30f] transition-colors duration-300"
+                >
                   Services
                 </a>
               </li>
               <li>
-                <a href="#form" className="hover:text-[#04b30f] transition-colors duration-300">
+                <a
+                  href="#form"
+                  className="hover:text-[#04b30f] transition-colors duration-300"
+                >
                   Contact
                 </a>
               </li>
@@ -85,10 +121,18 @@ function Footer() {
               Services
             </h3>
             <ul className="space-y-2">
-              <li className="hover:text-[#04b30f] transition-colors duration-300">Web Development</li>
-              <li className="hover:text-[#04b30f] transition-colors duration-300">Responsive Design</li>
-              <li className="hover:text-[#04b30f] transition-colors duration-300">React Development</li>
-              <li className="hover:text-[#04b30f] transition-colors duration-300">SEO Optimization</li>
+              <li className="hover:text-[#04b30f] transition-colors duration-300">
+                Web Development
+              </li>
+              <li className="hover:text-[#04b30f] transition-colors duration-300">
+                Responsive Design
+              </li>
+              <li className="hover:text-[#04b30f] transition-colors duration-300">
+                React Development
+              </li>
+              <li className="hover:text-[#04b30f] transition-colors duration-300">
+                SEO Optimization
+              </li>
             </ul>
           </div>
 

@@ -6,3 +6,11 @@
   font-weight: 400;
   font-style: normal;
 }
+.icons {
+   opacity:0;
+   transform: translateY(-40px);
+}
+#heroImg {
+   opacity:0;
+   transform: translateX(-100px);
+}

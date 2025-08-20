@@ -1,31 +1,70 @@
-import React from 'react'
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import React from "react";
 
 function Services() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    const serviceTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#services",
+        // markers:true,
+        start: "30% bottom",
+        end: "50% center",
+        scrub: true,
+      },
+    });
+    serviceTL.from(
+      "#servicesHeading",
+      {
+        opacity: 0,
+        y: 50,
+        duration: 0.3,
+      },
+      "one"
+    );
+    serviceTL.from(
+      "#servicesPara",
+      {
+        opacity: 0,
+        y: 50,
+        duration: 0.3,
+      },
+      "one"
+    );
+    serviceTL.from("#servicesContainer", {
+      opacity: 0,
+      y: 30,
+      // stagger:0.1,
+      duration: 0.4,
+    });
+  });
+
   return (
     <section id="services" class="bg-black text-white py-16 px-4">
       <div class="container mx-auto">
         <div class="text-center mb-16">
           <h2
+            id="servicesHeading"
             class="text-3xl md:text-4xl font-bold mb-4 underline decoration-[#04b30f]"
           >
             My Services
           </h2>
-          <p class="max-w-2xl mx-auto text-gray-300">
+          <p id="servicesPara" class="max-w-2xl mx-auto text-gray-300">
             I deliver high-quality digital solutions tailored to your business
             needs
           </p>
         </div>
 
         <div
+          id="servicesContainer"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center w-full"
         >
-          <div
-            class="bg-[#1E1E1E] w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#04b30f]/20"
-          >
+          <div class="bg-[#1E1E1E] servicesBox w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#04b30f]/20">
             <div class="p-6">
-              <div
-                class="w-14 h-14 bg-[#04b30f] rounded-full flex items-center justify-center mb-4"
-              >
+              <div class="w-14 h-14 bg-[#04b30f] rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-8 w-8 text-white"
@@ -96,13 +135,9 @@ function Services() {
             </div>
           </div>
 
-          <div
-            class="bg-[#1E1E1E] w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#04b30f]/20"
-          >
+          <div class="bg-[#1E1E1E] servicesBox w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#04b30f]/20">
             <div class="p-6">
-              <div
-                class="w-14 h-14 bg-[#04b30f] rounded-full flex items-center justify-center mb-4"
-              >
+              <div class="w-14 h-14 bg-[#04b30f] rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-8 w-8 text-white"
@@ -173,13 +208,9 @@ function Services() {
             </div>
           </div>
 
-          <div
-            class="bg-[#1E1E1E] w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#04b30f]/20"
-          >
+          <div class="bg-[#1E1E1E] servicesBox w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#04b30f]/20">
             <div class="p-6">
-              <div
-                class="w-14 h-14 bg-[#04b30f] rounded-full flex items-center justify-center mb-4"
-              >
+              <div class="w-14 h-14 bg-[#04b30f] rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-8 w-8 text-white"
@@ -250,13 +281,9 @@ function Services() {
             </div>
           </div>
 
-          <div
-            class="bg-[#1E1E1E] w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#04b30f]/20"
-          >
+          <div class="bg-[#1E1E1E] servicesBox w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#04b30f]/20">
             <div class="p-6">
-              <div
-                class="w-14 h-14 bg-[#04b30f] rounded-full flex items-center justify-center mb-4"
-              >
+              <div class="w-14 h-14 bg-[#04b30f] rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-8 w-8 text-white"
@@ -329,7 +356,7 @@ function Services() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Services
+export default Services;

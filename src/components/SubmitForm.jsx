@@ -1,20 +1,66 @@
-import React from 'react'
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import React from "react";
 
 const SubmitForm = () => {
-    function handleSubmit(e) {
-    e.preventDefault()
-    e.target.submit()
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    const formTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#submitform",
+        // markers:true,
+        start: "top 80%",
+        end: "40% center",
+        scrub: true,
+      },
+    });
+    formTL.from("#formHeading", {
+      opacity: 0,
+      y: 50,
+      duration: 0.3,
+    });
+    formTL.from(
+      "#form",
+      {
+        opacity: 0,
+        x: 100,
+        duration: 0.3,
+      },
+      "one"
+    );
+    formTL.from(
+      "#map",
+      {
+        opacity: 0,
+        x: -100,
+        duration: 0.1,
+      },
+      "one"
+    );
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    e.target.submit();
   }
   return (
     <section
       id="submitform"
-      className="flex flex-col justify-center items-center w-full px-4 gap-11 py-10"
+      className="flex flex-col overflow-x-hidden justify-center items-center w-full px-4 gap-11 py-10"
     >
-      <h2 className="text-white text-3xl md:text-4xl mb-8 underline decoration-green-700">
+      <h2
+        id="formHeading"
+        className="text-white text-3xl md:text-4xl mb-8 underline decoration-green-700"
+      >
         Lets Talk about Work
       </h2>
       <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="w-full bg-white rounded-2xl overflow-hidden min-h-[500px]">
+        <div
+          id="map"
+          className="w-full rounded-2xl overflow-hidden min-h-[500px]"
+        >
           <iframe
             className="h-full w-full"
             src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7236.741276949068!2d67.24685790976058!3d24.919440578049326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU1JzExLjgiTiA2N8KwMTQnNTcuMiJF!5e0!3m2!1sen!2s!4v1744178551979!5m2!1sen!2s"
@@ -25,7 +71,10 @@ const SubmitForm = () => {
           />
         </div>
 
-        <div className="w-full flex justify-center items-center gap-7">
+        <div
+          id="form"
+          className="w-full flex justify-center items-center gap-7"
+        >
           <div
             id="drawer-contact"
             className="flex flex-col py-3.5 gap-6 border-[#04b30f] hover:scale-[1.02] duration-200 shadow-[0_0px_60px_#0e52189f] border-2 w-full max-w-[600px] h-[550px] rounded-3xl p-6"
@@ -55,7 +104,11 @@ const SubmitForm = () => {
             >
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="box" />
-              <input type="hidden" name="_subject" value="New message from Portfolio" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New message from Portfolio"
+              />
 
               <div>
                 <label htmlFor="subject" className="text-white text-[20px]">
@@ -110,7 +163,7 @@ const SubmitForm = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SubmitForm
+export default SubmitForm;
