@@ -163,8 +163,8 @@ function Preloader({ onComplete }) {
           
           {/* Logo */}
           <div className="preloader-logo w-20 overflow-hidden h-20 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-green-500/20 mx-auto">
-            <span className="text-white text-2xl font-bold">S</span>
-            {/* <img src="/images/SalmanLogo.webp" alt="" srcset="" /> */}
+            {/* <span className="text-white text-2xl font-bold">S</span> */}
+            <img src="/images/SalmanLogoGreen.webp" alt="" srcset="" />
           </div>
         </div>
         

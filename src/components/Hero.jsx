@@ -59,6 +59,11 @@ const Hero = () => {
         yoyo: true,
         ease: "sine.inOut"
       }, "<+=0.5");
+      masterTL.to("#ImgDiv", {
+        duration: 0.3,
+        opacity:1,
+        ease: "sine.inOut"
+      }, "<+=0.5");
       masterTL.to("#heroImg", {
         duration: 0.3,
         x:0,
@@ -193,7 +198,7 @@ const Hero = () => {
       <div className="hero-blob-1 absolute top-0 left-0 w-1/3 h-1/3 bg-gradient-to-br from-green-900/20 to-transparent rounded-full filter blur-3xl"></div>
       <div className="hero-blob-2 absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-green-800/15 to-transparent rounded-full filter blur-3xl"></div>
       
-      <div className="w-full flex justify-center items-center h-full z-10 py-8">
+      <div id="ImgDiv" className="w-full opacity-0 flex justify-center items-center h-full z-10 py-8">
         <div
           id="heroImg"
           className="relative w-[280px] md:w-[400px] h-[280px] md:h-[400px] rounded-full overflow-hidden transition duration-500 z-10"

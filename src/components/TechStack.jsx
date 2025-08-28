@@ -1,8 +1,25 @@
- import { useGSAP } from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useRef, useContext } from "react";
 import { AnimationContext } from "../App";
+import { 
+  SiReact, 
+  SiNextdotjs, 
+  SiJavascript, 
+  SiTypescript,
+  SiHtml5,
+  SiCss3,
+  SiSass,
+  SiTailwindcss,
+  SiGreensock,
+  SiRedux,
+  SiGithub,
+  SiNodedotjs,
+  SiGit,
+  SiFigma,
+  SiFirebase
+} from "react-icons/si";
 
 function TechStack() {
   gsap.registerPlugin(ScrollTrigger);
@@ -10,21 +27,104 @@ function TechStack() {
   const sliderRef = useRef(null);
   const { isPreloaderComplete, registerAnimationTrigger } = useContext(AnimationContext);
 
-  // Your technology stack data
+  // Technology stack data with React Icons
   const technologies = [
-    { name: "React", icon: "react", color: "#61DAFB" },
-    { name: "Next.js", icon: "nextjs", color: "#000000" },
-    { name: "JavaScript", icon: "javascript", color: "#F7DF1E" },
-    { name: "TypeScript", icon: "typescript", color: "#007ACC" },
-    { name: "HTML5", icon: "html5", color: "#E34F26" },
-    { name: "CSS3", icon: "css3", color: "#1572B6" },
-    { name: "Tailwind CSS", icon: "tailwindcss", color: "#06B6D4" },
-    { name: "GSAP", icon: "gsap", color: "#88CE02" },
-    { name: "Node.js", icon: "nodejs", color: "#339933" },
-    { name: "Git", icon: "git", color: "#F05032" },
-    { name: "Figma", icon: "figma", color: "#F24E1E" },
-    { name: "Firebase", icon: "firebase", color: "#FFCA28" },
+    { 
+      name: "React", 
+      icon: <SiReact size={32} />, 
+      color: "#61DAFB",
+      category: "Frontend"
+    },
+    { 
+      name: "Next.js", 
+      icon: <SiNextdotjs size={32} />, 
+      color: "#000000",
+      category: "Frontend"
+    },
+    { 
+      name: "JavaScript", 
+      icon: <SiJavascript size={32} />, 
+      color: "#F7DF1E",
+      category: "Frontend"
+    },
+    { 
+      name: "TypeScript", 
+      icon: <SiTypescript size={32} />, 
+      color: "#007ACC",
+      category: "Frontend"
+    },
+    { 
+      name: "HTML5", 
+      icon: <SiHtml5 size={32} />, 
+      color: "#E34F26",
+      category: "Styles"
+    },
+    { 
+      name: "CSS3", 
+      icon: <SiCss3 size={32} />, 
+      color: "#1572B6",
+      category: "Styles"
+    },
+    { 
+      name: "Sass", 
+      icon: <SiSass size={32} />, 
+      color: "#CC6699",
+      category: "Styles"
+    },
+    { 
+      name: "Tailwind CSS", 
+      icon: <SiTailwindcss size={32} />, 
+      color: "#06B6D4",
+      category: "Styles"
+    },
+    { 
+      name: "GSAP", 
+      icon: <SiGreensock size={32} />, 
+      color: "#88CE02",
+      category: "Tools & Others"
+    },
+    { 
+      name: "Redux", 
+      icon: <SiRedux size={32} />, 
+      color: "#764ABC",
+      category: "Tools & Others"
+    },
+    { 
+      name: "GitHub", 
+      icon: <SiGithub size={32} />, 
+      color: "#181717",
+      category: "Tools & Others"
+    },
+    // { 
+    //   name: "Node.js", 
+    //   icon: <SiNodedotjs size={32} />, 
+    //   color: "#339933",
+    //   category: "Tools & Others"
+    // },
+    // { 
+    //   name: "Git", 
+    //   icon: <SiGit size={32} />, 
+    //   color: "#F05032",
+    //   category: "Tools & Others"
+    // },
+    // { 
+    //   name: "Figma", 
+    //   icon: <SiFigma size={32} />, 
+    //   color: "#F24E1E",
+    //   category: "Tools & Others"
+    // },
+    // { 
+    //   name: "Firebase", 
+    //   icon: <SiFirebase size={32} />, 
+    //   color: "#FFCA28",
+    //   category: "Tools & Others"
+    // },
   ];
+
+  // Categorize technologies
+  const frontendTechs = technologies.filter(tech => tech.category === "Frontend");
+  const stylesTechs = technologies.filter(tech => tech.category === "Styles");
+  const toolsTechs = technologies.filter(tech => tech.category === "Tools & Others");
 
   // Duplicate the array for seamless looping
   const duplicatedTechs = [...technologies, ...technologies];
@@ -134,17 +234,20 @@ function TechStack() {
   const renderTechIcon = (tech) => {
     return (
       <div 
-        className="w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-bold mb-3 transition-all duration-300 group-hover:scale-110"
-        style={{ backgroundColor: `${tech.color}20`, color: tech.color }}
+        className="w-16 h-16 rounded-xl flex items-center justify-center mb-3 transition-all duration-300 group-hover:scale-110"
+        style={{ 
+          backgroundColor: `${tech.color}20`,
+          color: tech.color
+        }}
       >
-        {tech.name.slice(0, 1)}
+        {tech.icon}
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
     );
   };
 
   return (
-    <section id="tech-stack" ref={sectionRef} className="relative py-20 px-4 md:px-8 lg:px-16  bg-gradient-to-b from-gray-900 to-black overflow-hidden">
+    <section id="tech-stack" ref={sectionRef} className="relative py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-gray-900 to-black overflow-hidden">
       {/* Animated background elements */}
       <div className="tech-blob-1 absolute top-20 left-10 w-80 h-80 bg-green-500/5 rounded-full filter blur-3xl"></div>
       <div className="tech-blob-2 absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/5 rounded-full filter blur-3xl"></div>
@@ -182,54 +285,66 @@ function TechStack() {
 
         {/* Technology categories */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Frontend Technologies */}
           <div className="bg-gray-800/30 backdrop-blur-md rounded-2xl p-6 border border-gray-700 hover:border-green-400/30 transition-all duration-300">
             <h3 className="text-xl font-bold text-white mb-4 flex items-center">
               <div className="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
               Frontend
             </h3>
             <div className="flex flex-wrap gap-2">
-              {technologies.slice(0, 4).map((tech, index) => (
+              {frontendTechs.map((tech, index) => (
                 <span 
                   key={index}
-                  className="px-3 py-1.5 bg-gray-700/50 text-gray-300 rounded-full text-sm transition-all duration-300 hover:bg-gray-700 hover:text-white"
+                  className="px-3 py-1.5 bg-gray-700/50 text-gray-300 rounded-full text-sm transition-all duration-300 hover:bg-gray-700 hover:text-white flex items-center"
                   style={{ borderLeft: `3px solid ${tech.color}` }}
                 >
+                  <span className="mr-2" style={{ color: tech.color }}>
+                    {React.cloneElement(tech.icon, { size: 16 })}
+                  </span>
                   {tech.name}
                 </span>
               ))}
             </div>
           </div>
 
+          {/* Styles Technologies */}
           <div className="bg-gray-800/30 backdrop-blur-md rounded-2xl p-6 border border-gray-700 hover:border-green-400/30 transition-all duration-300">
             <h3 className="text-xl font-bold text-white mb-4 flex items-center">
               <div className="w-3 h-3 bg-blue-400 rounded-full mr-2"></div>
-              Styling
+              Styles
             </h3>
             <div className="flex flex-wrap gap-2">
-              {technologies.slice(4, 7).map((tech, index) => (
+              {stylesTechs.map((tech, index) => (
                 <span 
                   key={index}
-                  className="px-3 py-1.5 bg-gray-700/50 text-gray-300 rounded-full text-sm transition-all duration-300 hover:bg-gray-700 hover:text-white"
+                  className="px-3 py-1.5 bg-gray-700/50 text-gray-300 rounded-full text-sm transition-all duration-300 hover:bg-gray-700 hover:text-white flex items-center"
                   style={{ borderLeft: `3px solid ${tech.color}` }}
                 >
+                  <span className="mr-2" style={{ color: tech.color }}>
+                    {React.cloneElement(tech.icon, { size: 16 })}
+                  </span>
                   {tech.name}
                 </span>
               ))}
             </div>
           </div>
 
+          {/* Tools & Others Technologies */}
           <div className="bg-gray-800/30 backdrop-blur-md rounded-2xl p-6 border border-gray-700 hover:border-green-400/30 transition-all duration-300">
             <h3 className="text-xl font-bold text-white mb-4 flex items-center">
               <div className="w-3 h-3 bg-purple-400 rounded-full mr-2"></div>
               Tools & Others
             </h3>
             <div className="flex flex-wrap gap-2">
-              {technologies.slice(7).map((tech, index) => (
+              {toolsTechs.map((tech, index) => (
                 <span 
                   key={index}
-                  className="px-3 py-1.5 bg-gray-700/50 text-gray-300 rounded-full text-sm transition-all duration-300 hover:bg-gray-700 hover:text-white"
+                  className="px-3 py-1.5 bg-gray-700/50 text-gray-300 rounded-full text-sm transition-all duration-300 hover:bg-gray-700 hover:text-white flex items-center"
                   style={{ borderLeft: `3px solid ${tech.color}` }}
                 >
+                  <span className="mr-2" style={{ color: tech.color }}>
+                    {React.cloneElement(tech.icon, { size: 16 })}
+                  </span>
                   {tech.name}
                 </span>
               ))}
